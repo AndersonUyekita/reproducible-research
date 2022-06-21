@@ -1,0 +1,84 @@
+---
+title: 'Reproducible Research'
+author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
+output:
+  github_document: default
+params:
+  author: "Anderson H Uyekita"
+  course: "Reproducible Research"
+  course_url: "https://www.coursera.org/learn/reproducible-research"
+  specialization: "Data Science: Foundations using R Specialization"
+  specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
+  instructor: "Roger D Peng"
+  course_start: !r lubridate::ymd("2022/06/20")
+  course_finish: !r lubridate::today()
+  certificate_url: "./"
+  page: ""
+  weeks: !r list(
+    week_1 = 1,
+    week_2 = 2,
+    week_3 = 3,
+    week_4 = 4)
+  quizzes: !r list(
+    quiz_1 = 1,
+    quiz_2 = 2,
+    quiz_3 = 3,
+    quiz_4 = 4)
+  projects: !r list(
+    project_1 = 1,
+    project_2 = 2,
+    project_3 = 3,
+    project_4 = 4)
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,cache=TRUE,message=FALSE,warning=FALSE)
+library(rmarkdown)
+library(lubridate)
+```
+
+`r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
+`r sprintf(fmt = "* &#x1f4da; Specialization: [%s](%s){target='_blank' rel='noopener'}", params$specialization, params$specialization_url)`
+`r sprintf(fmt = "* &#x1f4d6; Course: [%s](%s){target='_blank' rel='noopener'}", params$course, params$course_url)`
+    `r sprintf(fmt = "* &#x1F9D1;&#x200d;&#x1F3EB; Instructor: %s", params$instructor)`
+    `r sprintf(fmt = "* &#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
+    `r sprintf(fmt = "* &#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
+`r sprintf(fmt = "* &#x1F393; [Certificate](%s)", params$certificate_url)`
+
+--------------------------------------------------------------------------------
+
+#### Assignments & Deliverables
+
+* [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-1)
+* [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-2)
+* [&#x1F4DD; Quiz 1](./Week%201/quiz-1_reproducible-research.md)
+* [&#x1F4DD; Quiz 2](./Week%202/quiz-2_reproducible-research.md)
+
+--------------------------------------------------------------------------------
+
+#### Class Notes
+
+* [&#x1F4C6; Week 1](./Week%201/README.md)
+* [&#x1F4C6; Week 2](./Week%202/README.md)
+* [&#x1F4C6; Week 3](./Week%203/README.md)
+* [&#x1F4C6; Week 4](./Week%204/README.md)
+* [&#x1F4D1; Course Textbook Notes](./book/README.md)
+
+--------------------------------------------------------------------------------
+
+#### Course Description
+
+> In this course you will learn the ideas of reproducible research and reporting of statistical analyses. Topics covered include literate programming tools, evidence-based data analysis, and organizing data analyses. In this course you will learn to write a document using R markdown, integrate live R code into a literate statistical program, compile R markdown documents using knitr and related tools, publish reproducible documents to the web, and organize a data analysis so that it is reproducible and accessible to others.
+
+#### Course Syllabus
+
+* Structuring and organizing a data analysis
+* Markdown and R Markdown
+* knitr / RPubs
+* Reproducible research check list
+* Evidence-based data analysis
+* Case studies in air pollution epidemiology and high-throughput biology
+
+#### Course Textbook
+
+The book [&#x1F4D4; Report Writing for Data Science in R](./book/exploratory-data-analysis-with-r.pdf) covers the lecture material in this course.

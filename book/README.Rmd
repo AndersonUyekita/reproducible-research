@@ -1,0 +1,141 @@
+---
+title: '`Book` Exploratory Data Analysis with R'
+author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
+output:
+  github_document: default
+params:
+  author: "Anderson H Uyekita"
+  course: "Exploratory Data Analysis"
+  course_url: "https://www.coursera.org/learn/exploratory-data-analysis"
+  specialization: "Data Science: Foundations using R Specialization"
+  specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
+  instructor: "Roger D Peng"
+  week: "Reading"
+  course_start: !r lubridate::ymd("2022/06/04")
+  course_finish: !r lubridate::ymd("2022/06/XX")
+  slug: 'Week%201'
+  book: 'Exploratory Data Analysis with R'
+  book_url: 'https://leanpub.com/exdata'
+---
+
+```{r setup, include=FALSE,warning=FALSE,message=FALSE}
+knitr::opts_chunk$set(echo = TRUE,cache=TRUE,message=FALSE,warning=FALSE)
+library(rmarkdown)
+library(lubridate)
+```
+
+* `r if(!knitr::is_html_output()) {sprintf(fmt = "&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
+* `r sprintf(fmt = "&#x1f4da; Specialization: [%s](%s){target='_blank' rel='noopener'}", params$specialization, params$specialization_url)`
+* `r sprintf(fmt = "&#x1f4d6; Course: [%s](%s){target='_blank' rel='noopener'}", params$course, params$course_url)`
+    * `r sprintf(fmt = "&#x1F9D1;&#x200d;&#x1F3EB; Instructor: %s", params$instructor)`
+* `r sprintf(fmt = "&#x1F4C6; %s", params$week)`
+    * `r sprintf(fmt = "&#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
+    * `r sprintf(fmt = "&#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
+* `r sprintf(fmt = "&#x1F4D4; Book: [%s](%s){target='_blank' rel='noopener'}", params$book, params$book_url)`
+
+--------------------------------------------------------------------------------
+
+## Notes
+
+#### Exploratory Data Analysis Checklist
+
+1. [Formulate your question](#formulate_your_question)
+2. [Read in your data](#read_in_your_data)
+3. Check the packaging
+4. Run `str()`
+5. Look at the top and the bottom of your data
+6. Check your “n”s
+7. Validate with at least one external data source
+8. Try the easy solution first
+9. Challenge your solution
+10. Follow up
+
+#### Formulate your question <a id="formulate_your_question" />
+
+
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+
+
+#### Read in your data <a id="read_in_your_data" />
+
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
+sd
+
+sf
+
+ds
