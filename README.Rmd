@@ -81,4 +81,4 @@ library(lubridate)
 
 #### Course Textbook
 
-The book [&#x1F4D4; Report Writing for Data Science in R](./book/exploratory-data-analysis-with-r.pdf) covers the lecture material in this course.
+The book [&#x1F4D4; Report Writing for Data Science in R](./book/report-writing-for-data-science-in-r.pdf) covers the lecture material in this course.
