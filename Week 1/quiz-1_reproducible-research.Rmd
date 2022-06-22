@@ -1,24 +1,25 @@
 ---
-title: '`Quiz 1` Exploratory Data Analysis'
+title: '`Quiz 1` Reproducible Research'
 author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
 output:
-  github_document: default
   html_document:
+    self_contained: yes
     toc: true
     toc_depth: 4
     toc_float:
       collapsed: false
       smooth_scroll: true
+  github_document: default
 params:
   author: "Anderson H Uyekita"
-  course: "Exploratory Data Analysis"
-  course_url: "https://www.coursera.org/learn/exploratory-data-analysis"
+  course: "Reproducible Research"
+  course_url: "https://www.coursera.org/learn/reproducible-research"
   specialization: "Data Science: Foundations using R Specialization"
   specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
   instructor: "Roger D Peng"
+  course_start: !r lubridate::ymd("2022/06/20")
+  course_finish: !r lubridate::ymd("2022/06/22")
   week: "Week 1"
-  course_start: !r lubridate::ymd("2022/05/25")
-  course_finish: !r lubridate::ymd("2022/05/25")
   slug: 'Week%201'
 always_allow_html: true
 ---
@@ -41,7 +42,7 @@ library(magrittr)
 `r sprintf(fmt = "* &#x1F4C6; %s", params$week)`
     `r sprintf(fmt = "* &#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
     `r sprintf(fmt = "* &#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
-* `r if(!knitr::is_html_output()) {"&#x1F30E; Rpubs: [Interactive Document](https://rpubs.com/AndersonUyekita/quiz-1_exploratory-data-analysis)"}else{"&#x1F4E6; Github Repository: [Static Document](https://github.com/AndersonUyekita/getting-and-cleaning-data/blob/main/Week%201/quiz-1_exploratory-data-analysis.md){target='_blank' rel='noopener'}"}`
+* `r if(!knitr::is_html_output()) {"&#x1F30E; Rpubs: [Interactive Document](https://rpubs.com/AndersonUyekita/quiz-1_reproducible-research)"}else{"&#x1F4E6; Github Repository: [Static Document](https://github.com/AndersonUyekita/reproducible-research/blob/main/Week%201/quiz-1_reproducible-research.md){target='_blank' rel='noopener'}"}`
 
 --------------------------------------------------------------------------------
 
@@ -56,182 +57,154 @@ if (!dir.exists("data")) {
 
 ## Question 1
 
-Which of the following is a principle of analytic graphics?
+Suppose I conduct a study and publish my findings. Which of the following is an example of a replication of my study?
 
 
-- [ ] Don't plot more than two variables at at time
-- [x] Show multivariate data
-- [ ] Show box plots (univariate summaries)
-- [ ] Make judicious use of color in your scatterplots
-- [ ] Only do what your tools allow you to do
+- [ ] I take my own data, analyze it again, and publish new findings.
+- [ ] I give my data to an independent investigator at another institution, she analyzes the data and gets the same results as I originally obtained.
+- [x] An investigator at another institution conducts a study addressing the same question, collects her own data, analyzes it separately from me, and publishes her own findings.
+- [ ] An investigator at another institution conducts a study addressing a different scientific question and publishes her findings.
 
-> According to six principles stated during the video [Principles of Analytic Graphics](./slides/1_1_1_PrinciplesofAnalyticGraphics.pdf){target='_blank' rel='noopener'}:
->
-> * Principle 1: Show comparisons
-> * Principle 2: Show causality, mechanism, explanation
-> * **Principle 3: Show multivariate data**
-> * Principle 4: Integrate multiple modes of evidence
-> * Principle 5: Describe and document the evidence
-> * Principle 6: Content is king
+**Answer**
+
+Someone could read your paper and try to replicate it using local data.
 
 ## Question 2
 
-What is the role of exploratory graphs in data analysis?
+Which of the following is a requirement for a published data analysis to be reproducible?
 
-- [ ] Axes, legends, and other details are clean and exactly detailed.
-- [x] They are typically made very quickly.
-- [ ] They are made for formal presentations.
-- [ ] Only a few are constructed.
+- [ ] The investigator's final publication is made available free of charge.
+- [ ] The analysis is conducted on a variant of the Unix operating system.
+- [x] The full computer code for doing the data analysis is made publicly available.
+- [ ] The data analysis is conducted using R.
 
-> According to the Summary of [Exploratory Graphs](./slides/1_1_2_ExploratoryGraphs.pdf){target='_blank' rel='noopener'} document.
->
-> * **Exploratory plots are "quick and dirty"**
-> * Let you summarize the data (usually graphically) and highlight any broad features
-> * Explore basic questions and hypotheses (and perhaps rule them out)
-> * Suggest modeling strategies for the "next step"
+**Answer**
+
+Reproducible Research: Make analytic data and code available so that others may reproduce findings.
 
 ## Question 3
 
-Which of the following is true about the base plotting system?
+Which of the following is an example of a reproducible study?
 
-- [x] Plots are created and annotated with separate functions
-- [ ] Margins and spacings are adjusted automatically depending on the type of plot and the data
-- [ ] Plots are typically created with a single function call
-- [ ] The system is most useful for conditioning plots
+- [ ] The study's analytic data are publicly available, but the computer code is not.
+- [ ] The study's analytic data and computer code are not publicly available, but the study was simple enough to be repeated by an independent investigator.
+- [ ] The study's original authors re-run their computer code on their analytic data and confirm publicly that the findings match those of the published results.
+- [x] The study's analytic data and computer code for the data analysis are publicly available. When the code is run on the analytic data, the findings are identical to the published results.
 
-> According to the Summary of [The Base Plotting System](./slides/1_2_2_PlottingBase.pdf){target='_blank' rel='noopener'} in R document.
->
-> * Plots in the base plotting system are created by calling successive R functions to "build up" a plot
-> * **Plotting occurs in two stages:**
->   * **Creation of a plot**
->   * **Annotation of a plot (adding lines, points, text, legends)**
-> * The base plotting system is very flexible and offers a high degree of control over plotting
+**Answer**
+
+Reproducible Research: Make analytic data and code available so that others may reproduce findings.
 
 ## Question 4
 
-Which of the following is an example of a valid graphics device in R?
+Which of the following is a reason that a study might NOT be fully **replicated**?
 
-- [ ] The keyboard
-- [ ] A socket connection
-- [ ] A Microsoft Word document
-- [ ] A file folder
-- [x] A PNG file
 
-> Based on slides 6 and 7 from [Graphics Devices in R](./slides/1_3_GraphicsDevicesinR.pdf){target='_blank' rel='noopener'} document.
-> 
-> * Vector formats: `pdf`, `svg`, `win.metafile`, and `postscript`, and;
-> * Bitmap formats: `png`, `jpeg`, `tiff`, and `bmp`.
+- [ ] The original study had null findings.
+- [ ] The original study was conducted by a well-known investigator.
+- [x] The original study was very expensive and there is no money to repeat it in a different setting.
+- [ ] The original investigator does not want to make the analytic data available.
 
+**Answer**
+
+Some results can not be replicated:
+
+* No time, opportunist;
+* No money, and;
+* Unique
 
 ## Question 5
 
-Which of the following is an example of a vector graphics device in R?
+Which of the following is a reason why publishing **reproducible research** is increasingly important?
 
-- [x] Postscript
-- [ ] TIFF
-- [ ] JPEG
-- [ ] GIF
-- [ ] PNG
+- [ ] Most studies today are small-scale and easily replicated.
+- [ ] Computing power is limited today, making it difficult to apply sophisticated statistical methods.
+- [x] New technologies are increasing the rate of data collection, creating datasets that are more complex and extremely high dimensional.
+- [ ] The statistical methods for most studies can be accurately described using plain language.
 
-> Based on slide 6 from [Graphics Devices in R](./slides/1_3_GraphicsDevicesinR.pdf){target='_blank' rel='noopener'} document.
-> 
-> * Vector formats: `pdf`, `svg`, `win.metafile`, and `postscript`, and;
+**Answer**
+
+New technologies increasing data collection throughput; data are more complex and extremely high dimensional
 
 ## Question 6
 
-Bitmapped file formats can be most useful for 
+What is the role of processing code in the research pipeline?
 
-- [x] Scatterplots with many many points
-- [ ] Plots that are not scaled to a specific resolution
-- [ ] Plots that require animation or interactivity
-- [ ] Plots that may need to be resized
+- [x] It transforms the measured data into analytic data.
+- [ ] It transforms the computational results into figures and tables.
+- [ ] It transforms the analytic data into computational results.
+- [ ] It conducts the statistical analysis of the primary outcome.
 
-> According to the Summary of [Graphics Devices in R](./slides/1_3_GraphicsDevicesinR.pdf){target='_blank' rel='noopener'} in R document.
->
-> * Plots must be created on a graphics device
-> * The default graphics device is almost always the screen device, which is most useful for exploratory analysis
-> * File devices are useful for creating plots that can be included in other documents or sent to other people
-> * For file devices, there are vector and bitmap formats
->   * Vector formats are good for line drawings and plots with solid colors using a modest number of points
->   * **Bitmap formats are good for plots with a large number of points, natural scenes or webbased plots**
+**Answer**
+
+![](./figure/quiz_fig-1.png)
 
 ## Question 7
 
-Which of the following functions is typically used to add elements to a plot in the base graphics system?
+Which is a goal of literate statistical programming?
 
-- [x] text()
-- [ ] plot()
-- [ ] boxplot()
-- [ ] hist()
+- [x] Combine explanatory text and data analysis code in a single document.
+- [ ] Separate figures and tables from other data analytic summaries.
+- [ ] Require that data analysis summaries are always written in LaTeX.
+- [ ] Ensure that data analysis documents are always exported in PDF format.
 
-> Based on slide 13 from [The Base Plotting System in R](./slides/1_2_2_PlottingBase.pdf){target='_blank' rel='noopener'} document.
-> 
-> * plot: make a scatterplot, or other type of plot depending on the class of the object being plotted
-> * lines: add lines to a plot, given a vector x values and a corresponding vector of y values (or a 2-
-> * column matrix); this function just connects the dots
-> * points: add points to a plot
-> * **text: add text labels to a plot using specified x, y coordinates**
-> * title: add annotations to x, y axis labels, title, subtitle, outer margin
-> * mtext: add arbitrary text to the margins (inner or outer) of the plot
-> * axis: adding axis ticks/labels
+**Answer**
+
+* **An article is a stream of text and code**
+* Analysis code is divided into text and code "chunks"
+* Each code chunk loads data and computes results
+* Presentation code formats results
+* Article text explains what is going on
+* Literate programs can be weaved to produce human-readable documents and tangled to produce machine-readable documents.
 
 ## Question 8
 
-Which function opens the screen graphics device for the Mac?
+What does it mean to weave a literate statistical program?
 
-- [x] quartz()
-- [ ] png()
-- [ ] bitmap()
-- [ ] pdf()
+- [ ] Transform a literate program from R to python.
+- [x] Transform the literate program into a human readable document.
+- [ ] Compress the literate program so that it takes up less space.
+- [ ] Transform the literate program into a machine readable code file.
 
-> Based on slide 2 from [Graphics Devices in R](./slides/1_3_GraphicsDevicesinR.pdf){target='_blank' rel='noopener'} document.
->
-> * A graphics device is something where you can make a plot appear
->   * A window on your computer (screen device)
->   * A PDF file (file device)
->   * A PNG or JPEG file (file device)
->   * A scalable vector graphics (SVG) file (file device)
-> * When you make a plot in R, it has to be "sent" to a specific graphics device
-> * The most common place for a plot to be "sent" is the screen device
->   * **On a Mac the screen device is launched with the quartz()**
->   * On Windows the screen device is launched with windows()
->   * On Unix/Linux the screen device is launched with x11()
+**Answer**
+
+* An article is a stream of text and code
+* Analysis code is divided into text and code "chunks"
+* Each code chunk loads data and computes results
+* Presentation code formats results
+* Article text explains what is going on
+* **Literate programs can be weaved to produce human-readable documents and tangled to produce machine-readable documents.**
 
 ## Question 9
 
-What does the 'pch' option to par() control?
+Which of the following is required to implement a literate programming system?
 
-- [ ] the orientation of the axis labels on the plot
-- [ ] the size of the plotting symbol in a scatterplot
-- [x] the plotting symbol/character in the base graphics system
-- [ ] the line width in the base graphics system
+- [x] A programming language like R.
+- [ ] A web server for publishing documents.
+- [ ] A Unix-based computer system.
+- [ ] A program that views PDF files.
 
-> Based on slide 9 from [The Base Plotting System in R](./slides/1_2_2_PlottingBase.pdf){target='_blank' rel='noopener'} document.
->
-> * **pch: the plotting symbol (default is open circle)**
-> * lty: the line type (default is solid line), can be dashed, dotted, etc.
-> * lwd: the line width, specified as an integer multiple
-> * col: the plotting color, specified as a number, string, or hex code; the colors() function gives
-> * you a vector of colors by name
-> * xlab: character string for the x-axis label
-> * ylab: character string for the y-axis label
+**Answer**
+
+* Literate programming is a general concept that requires:
+    1. A documentation language (human readable)
+    2. A programming language (machine readable)
+* **Sweave uses `Latex` and `R` as the documentation and programming languages**
+* Sweave was developed by Friedrich Leisch and maintained by R core
+
 
 ## Question 10
 
-If I want to save a plot to a PDF file, which of the following is a correct way of doing that?
+What is one way in which the knitr system differs from Sweave?
 
-- [ ] Construct the plot on the PNG device with png(), then copy it to a PDF with dev.copy2pdf().
-- [x] Construct the plot on the screen device and then copy it to a PDF file with dev.copy2pdf()
-- [ ] Open the screen device with quartz(), construct the plot, and then close the device with dev.off().
-- [ ] Open the PostScript device with postscript(), construct the plot, then close the device with dev.off().
+- [ ] knitr was developed by Friedrich Leisch.
+- [x] knitr allows for the use of markdown instead of LaTeX.
+- [ ] knitr lacks features like caching of code chunks.
+- [ ] knitr is written in python instead of R.
 
-> Based on slide 9 from [Graphics Devices in R](./slides/1_3_GraphicsDevicesinR.pdf){target='_blank' rel='noopener'} document.
->
-> Copying a plot to another device can be useful because some plots require a lot of code and it can be a pain to type all that in again for a different device.
->
-> * dev.copy: copy a plot from one device to another
-> * **dev.copy2pdf: specifically copy a plot to a PDF file**
+**Answer**
 
-```{r,include=FALSE}
-markdown::renderMarkdown(file = basename(path = rstudioapi::getSourceEditorContext()$path))
-```
+* Sweave has many limitations
+    * **Focused primarily on Latex, a difficult to learn markup language used only by weirdos**
+    * Lacks features like caching, multiple plots per chunk, mixing programming languages and many other technical items
+    * Not frequently updated or very actively developed.
