@@ -11,7 +11,7 @@ Reproducible Research
     target="_blank" rel="noopener">Reproducible Research</a>
     -   🧑‍🏫 Instructor: Roger D Peng
     -   🚦 Start: Monday, 20 June 2022
-    -   🏁 Finish: Monday, 20 June 2022
+    -   🏁 Finish: Wednesday, 22 June 2022
 -   🎓 [Certificate](./)
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Reproducible Research
 
 -   [🚀 Course Project 1
     Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-1)
--   [🚀 Course Project 1
+-   [🚀 Course Project 2
     Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-2)
 -   [📝 Quiz 1](./Week%201/quiz-1_reproducible-research.md)
 -   [📝 Quiz 2](./Week%202/quiz-2_reproducible-research.md)
@@ -29,11 +29,11 @@ Reproducible Research
 
 #### Class Notes
 
--   [📆 Week 1](./Week%201/README.md)
--   [📆 Week 2](./Week%202/README.md)
--   [📆 Week 3](./Week%203/README.md)
--   [📆 Week 4](./Week%204/README.md)
--   [📑 Course Textbook Notes](./book/README.md)
+-   [📆 Week 1](./tree/main/Week%201)
+-   [📆 Week 2](./tree/main/Week%202)
+-   [📆 Week 3](./tree/main/Week%203)
+-   [📆 Week 4](./tree/main/Week%204)
+-   [📑 Course Textbook Notes](./tree/main/book)
 
 ------------------------------------------------------------------------
 
@@ -61,5 +61,13 @@ Reproducible Research
 #### Course Textbook
 
 The book [📔 Report Writing for Data Science in
-R](./book/exploratory-data-analysis-with-r.pdf) covers the lecture
+R](./book/report-writing-for-data-science-in-r.pdf) covers the lecture
 material in this course.
+
+#### Course Projects
+
+> The Course Projects focus on plotting and will be assessed via peer
+> assessment. In these assignments, you will be asked to conduct data
+> analysis and you will be evaluated by your classmates on the work and
+> code that you write. Assignments evaluated via peer assessment will
+> make use of your GitHub account or the RPubs web site.

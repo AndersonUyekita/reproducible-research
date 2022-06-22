@@ -50,7 +50,7 @@ library(lubridate)
 #### Assignments & Deliverables
 
 * [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-1)
-* [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-2)
+* [&#x1F680; Course Project 2 Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-2)
 * [&#x1F4DD; Quiz 1](./Week%201/quiz-1_reproducible-research.md)
 * [&#x1F4DD; Quiz 2](./Week%202/quiz-2_reproducible-research.md)
 
@@ -58,11 +58,11 @@ library(lubridate)
 
 #### Class Notes
 
-* [&#x1F4C6; Week 1](./Week%201/README.md)
-* [&#x1F4C6; Week 2](./Week%202/README.md)
-* [&#x1F4C6; Week 3](./Week%203/README.md)
-* [&#x1F4C6; Week 4](./Week%204/README.md)
-* [&#x1F4D1; Course Textbook Notes](./book/README.md)
+* [&#x1F4C6; Week 1](./tree/main/Week%201)
+* [&#x1F4C6; Week 2](./tree/main/Week%202)
+* [&#x1F4C6; Week 3](./tree/main/Week%203)
+* [&#x1F4C6; Week 4](./tree/main/Week%204)
+* [&#x1F4D1; Course Textbook Notes](./tree/main/book)
 
 --------------------------------------------------------------------------------
 
@@ -82,3 +82,7 @@ library(lubridate)
 #### Course Textbook
 
 The book [&#x1F4D4; Report Writing for Data Science in R](./book/report-writing-for-data-science-in-r.pdf) covers the lecture material in this course.
+
+#### Course Projects
+
+> The Course Projects focus on plotting and will be assessed via peer assessment. In these assignments, you will be asked to conduct data analysis and you will be evaluated by your classmates on the work and code that you write. Assignments evaluated via peer assessment will make use of your GitHub account or the RPubs web site.
