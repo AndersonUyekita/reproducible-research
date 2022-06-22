@@ -1,18 +1,18 @@
 ---
-title: '`Week 2` Exploratory Data Analysis'
+title: '`Week 2` Reproducible Research'
 author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
 output:
   github_document: default
 params:
   author: "Anderson H Uyekita"
-  course: "Exploratory Data Analysis"
-  course_url: "https://www.coursera.org/learn/exploratory-data-analysis"
+  course: "Reproducible Research"
+  course_url: "https://www.coursera.org/learn/reproducible-research"
   specialization: "Data Science: Foundations using R Specialization"
   specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
   instructor: "Roger D Peng"
+  course_start: !r lubridate::ymd("2022/06/XX")
+  course_finish: !r lubridate::ymd("2022/06/XX")
   week: "Week 2"
-  course_start: !r lubridate::ymd("2022/06/07")
-  course_finish: !r lubridate::ymd("2022/06/08")
   slug: 'Week%202'
 ---
 
@@ -25,34 +25,36 @@ library(rmarkdown)
 library(lubridate)
 ```
 
-* `r if(!knitr::is_html_output()) {sprintf(fmt = "&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
-* `r sprintf(fmt = "&#x1f4da; Specialization: [%s](%s){target='_blank' rel='noopener'}", params$specialization, params$specialization_url)`
-* `r sprintf(fmt = "&#x1f4d6; Course: [%s](%s){target='_blank' rel='noopener'}", params$course, params$course_url)`
-    * `r sprintf(fmt = "&#x1F9D1;&#x200d;&#x1F3EB; Instructor: %s", params$instructor)`
-* `r sprintf(fmt = "&#x1F4C6; %s", params$week)`
-    * `r sprintf(fmt = "&#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
-    * `r sprintf(fmt = "&#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
+`r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
+`r sprintf(fmt = "* &#x1f4da; Specialization: [%s](%s){target='_blank' rel='noopener'}", params$specialization, params$specialization_url)`
+`r sprintf(fmt = "* &#x1f4d6; Course: [%s](%s){target='_blank' rel='noopener'}", params$course, params$course_url)`
+    `r sprintf(fmt = "* &#x1F9D1;&#x200d;&#x1F3EB; Instructor: %s", params$instructor)`
+`r sprintf(fmt = "* &#x1F4C6; %s", params$week)`
+    `r sprintf(fmt = "* &#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
+    `r sprintf(fmt = "* &#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
 
 --------------------------------------------------------------------------------
 
 #### Assignments & Deliverables
 
-* &#x1F4BB; Swirl
-    * Lattice Plotting System
-    * Working with Colors
-    * GGPlot2 Part1
-    * GGPlot2 Part2
-    * GGPlot2 Extras
-* [&#x1F4DD; Quiz 2](./quiz-2_exploratory-data-analysis.md)
+* [&#x1F4DD; Quiz 2](./quiz-2_reproducible-research.md)
+* [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-1)
 
 --------------------------------------------------------------------------------
 
 #### Slides
 
-* Lesson 1: Lattice Plotting System [](){id="lesson-1"}
-    * [Lattice Plotting System](./slides/2_1_plotting-lattice.pdf)
-* Lesson 2: ggplot2 [](){id="lesson-2"}
-    * [ggplot2](./slides/2_2_ggplot-2.pdf)
+* Lesson 1: R Markdown [](){id="lesson-1"}
+    * [Concepts and Ideas][l1_1]
+* Lesson 2: knitr [](){id="lesson-2"}
+    * [Structure of a Data Analysis - Part 1][l2_1]
+    * [Structure of a Data Analysis - Part 2][l2_2]
+
+
+[l1_1]: ./slides/1_1_repro-research.pdf
+[l2_1]: ./slides/1_3_1_structure-of-a-data-analysis-1.pdf
+[l2_2]: ./slides/1_3_2_structure-of-a-data-analysis-2.pdf
+[l3_1]: ./slides/1_4_organizing-a-data-analysis.pdf
 
 --------------------------------------------------------------------------------
 
