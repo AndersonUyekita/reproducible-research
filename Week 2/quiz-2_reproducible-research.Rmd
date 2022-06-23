@@ -2,6 +2,7 @@
 title: '`Quiz 2` Reproducible Research'
 author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
 output:
+  github_document: default
   html_document:
     self_contained: yes
     toc: true
@@ -9,7 +10,6 @@ output:
     toc_float:
       collapsed: false
       smooth_scroll: true
-  github_document: default
 params:
   author: "Anderson H Uyekita"
   course: "Reproducible Research"
@@ -42,7 +42,7 @@ library(magrittr)
 `r sprintf(fmt = "* &#x1F4C6; %s", params$week)`
     `r sprintf(fmt = "* &#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
     `r sprintf(fmt = "* &#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
-* `r if(!knitr::is_html_output()) {"&#x1F30E; Rpubs: [Interactive Document](https://rpubs.com/AndersonUyekita/quiz-1_reproducible-research)"}else{"&#x1F4E6; Github Repository: [Static Document](https://github.com/AndersonUyekita/reproducible-research/blob/main/Week%201/quiz-1_reproducible-research.md){target='_blank' rel='noopener'}"}`
+* `r if(!knitr::is_html_output()) {"&#x1F30E; Rpubs: [Interactive Document](https://rpubs.com/AndersonUyekita/quiz-2_reproducible-research)"}else{"&#x1F4E6; Github Repository: [Static Document](https://github.com/AndersonUyekita/reproducible-research/blob/main/Week%201/quiz-2_reproducible-research.md){target='_blank' rel='noopener'}"}`
 
 --------------------------------------------------------------------------------
 

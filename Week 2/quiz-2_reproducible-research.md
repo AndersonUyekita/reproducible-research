@@ -14,7 +14,7 @@
     -   🚦 Start: Thursday, 23 June 2022
     -   🏁 Finish: Thursday, 23 June 2022
 -   🌎 Rpubs: [Interactive
-    Document](https://rpubs.com/AndersonUyekita/quiz-1_reproducible-research)
+    Document](https://rpubs.com/AndersonUyekita/quiz-2_reproducible-research)
 
 ------------------------------------------------------------------------
 
