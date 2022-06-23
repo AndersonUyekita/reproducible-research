@@ -1,8 +1,9 @@
 ---
-title: '`Quiz 2` Exploratory Data Analysis'
+title: '`Quiz 2` Reproducible Research'
 author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
 output:
   html_document:
+    self_contained: yes
     toc: true
     toc_depth: 4
     toc_float:
@@ -11,18 +12,15 @@ output:
   github_document: default
 params:
   author: "Anderson H Uyekita"
-  course: "Exploratory Data Analysis"
-  course_url: "https://www.coursera.org/learn/exploratory-data-analysis"
+  course: "Reproducible Research"
+  course_url: "https://www.coursera.org/learn/reproducible-research"
   specialization: "Data Science: Foundations using R Specialization"
   specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
   instructor: "Roger D Peng"
+  course_start: !r lubridate::ymd("2022/06/23")
+  course_finish: !r lubridate::ymd("2022/06/23")
   week: "Week 2"
-  course_start: !r lubridate::ymd("2022/06/07")
-  course_finish: !r lubridate::ymd("2022/06/08")
-  slug_relative: 'https://github.com/AndersonUyekita/exploratory-data-analysis/'
-  slug_chapter: 'Week%202/'
-  lesson_1: '2_1_plotting-lattice.pdf'
-  lesson_2: '2_2_ggplot-2.pdf'
+  slug: 'Week%202'
 always_allow_html: true
 ---
 
@@ -35,9 +33,6 @@ library(rmarkdown)
 library(lubridate)
 library(tidyverse)
 library(magrittr)
-library(lattice)
-library(ggplot2)
-library(ggplot2movies)
 ```
 
 `r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
@@ -47,7 +42,7 @@ library(ggplot2movies)
 `r sprintf(fmt = "* &#x1F4C6; %s", params$week)`
     `r sprintf(fmt = "* &#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
     `r sprintf(fmt = "* &#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
-* `r if(!knitr::is_html_output()) {"&#x1F30E; Rpubs: [Interactive Document](https://rpubs.com/AndersonUyekita/quiz-2_exploratory-data-analysis)"}else{"&#x1F4E6; Github Repository: [Static Document](https://github.com/AndersonUyekita/getting-and-cleaning-data/blob/main/Week%201/quiz-2_exploratory-data-analysis.md){target='_blank' rel='noopener'}"}`
+* `r if(!knitr::is_html_output()) {"&#x1F30E; Rpubs: [Interactive Document](https://rpubs.com/AndersonUyekita/quiz-1_reproducible-research)"}else{"&#x1F4E6; Github Repository: [Static Document](https://github.com/AndersonUyekita/reproducible-research/blob/main/Week%201/quiz-1_reproducible-research.md){target='_blank' rel='noopener'}"}`
 
 --------------------------------------------------------------------------------
 
@@ -62,226 +57,81 @@ if (!dir.exists("data")) {
 
 ## Question 1
 
-Under the lattice graphics system, what do the primary plotting functions like `xyplot()` and `bwplot()` return?
+Who created Markdown?
 
-- [ ] nothing; only a plot is made
-- [x] an object of class "trellis"
-- [ ] an object of class "plot"
-- [ ] an object of class "lattice"
+- [ ] Yihui Xie
+- [x] John Gruber
+- [ ] Robert Gentleman
+- [ ] Hadley Wickham
 
-> According to slide 7 from [the Lattice Plotting System in R][2_1_plotting-lattice.pdf] document:
->
-> * Lattice graphics functions return an object of the class trellis.
+**Answer**
+
+What is Markdown? What is Markdown?
+
+- Created by John Gruber and Aaron Swartz
+- A simplified version of "markup" languages
+- Allows one to focus on writing as opposed to formatting
+- Simple/minimal intuitive formatting elements
+- Easily converted to valid HTML (and other formats) using existing tools
+- Complete information is available at http://daringfireball.net/projects/markdown/
+- Some background information at http://daringfireball.net/2004/03/dive_into_markdown
 
 ## Question 2
 
-What is produced by the following code?
+When writing a document in R Markdown, how do you denote the beginning of an R code chunk?
 
-```
-library(nlme)
-library(lattice)
-xyplot(weight ~ Time | Diet, BodyWeight)
-```
-
-- [x] A set of 3 panels showing the relationship between weight and time for each diet.
-- [ ] A set of 3 panels showing the relationship between weight and time for each rat.
-- [ ] A set of 11 panels showing the relationship between weight and diet for each time.
-- [ ] A set of 16 panels showing the relationship between weight and time for each rat.
-
-First, we need to investigate the `nlme` package and what is inside of `BodyWeight` dataset.
-
-```{r,message=FALSE,warning=FALSE}
-library(nlme)
-library(lattice)
-
-# First rows of BodyWeight dataset.
-head(nlme::BodyWeight)
-
-# Counting the number of Diet factors
-length(unique(nlme::BodyWeight$Diet))
-```
-
-We already know the graphic should present `r length(unique(nlme::BodyWeight$Diet))` facets.
-
-Also, according to the Lattice Graphic notation, `weight` will be on the y-axis and `Time` on the x-axis.
-
-```{r}
-# Printing the Lattice Graphic to prove it.
-xyplot(weight ~ Time | Diet, BodyWeight)
-```
-
-**The graphic will display three facets presenting how each `Diet` will affect the Weight over `Time`.**
+- [ ] \<rcode\>
+- [ ] '''
+- [x] '''{r}
+- [ ] \<code\>
 
 ## Question 3
 
-Annotation of plots in any plotting system involves adding points, lines, or text to the plot, in addition to customizing axis labels or adding titles. Different plotting systems have different sets of functions for annotating plots in this way.
+When using knitr, how do you indicate the height and width of a plot created in a code chunk?
 
-Which of the following functions can be used to annotate the panels in a multi-panel lattice plot?
+- [ ] Set the 'height' and 'width' options for the code chunk
+- [ ] Set the 'size' and 'scale' options for the code chunk
+- [x] Set the 'fig.height' and 'fig.width' options for the code chunk
+- [ ] Set the 'dpi' option for the code chunk
 
-- [ ] points()
-- [ ] lines()
-- [x] panel.lmline()
-- [ ] axis()
-- [x] llines()
+**Answer**
 
-Based on slides 11 and 12 from [The Lattice Plotting System in R][2_1_plotting-lattice.pdf] document, I found a way to add an annotation in Lattice using the `panel.xyz()`, where `xyz()` could be abline lmline or other function.
+According to the Yihui Xie on its [webpage](https://yihui.org/knitr/options/#plots):
 
-The example on slide 12 uses the `panel.lmline()` annotation.
-
-To better understand `llines()`, I have used the `?llines`.
+>fig.width, fig.height: (both are 7; numeric) Width and height of the plot (in inches), to be used in the graphics device.
 
 ## Question 4
 
-The following code does NOT result in a plot appearing on the screen device.
+With some code chunks, we may not want the output generated by the chunk to be rendered into HTML but would prefer to print the output verbatim. How can we specify this preference for a given code chunk?
 
+- [ ] Set the option message = FALSE
+- [ ] Set the option highlight = TRUE
+- [x] Set the option results = "asis"
+- [ ] Set the option tidy = FALSE
+
+**Answer**
+
+```{r mtcars-plots, results='asis'}
+# Example.
+cat("**Hello** World!")
 ```
-library(lattice)
-library(datasets)
-data(airquality)
-p <- xyplot(Ozone ~ Wind | factor(Month), data = airquality)
-```
-
-Which of the following is an explanation for why no plot appears?
-
-- [ ] The xyplot() function, by default, sends plots to the PDF device.
-- [ ] The variables being plotted are not found in that dataset.
-- [ ] There is a syntax error in the call to xyplot().
-- [x] The object 'p' has not yet been printed with the appropriate print method.
-
-The graphic is OK unless it lacks a printing command to show it. The auto-printing will only work if the plot is not assigned to a variable, which is the current case.
 
 ## Question 5
 
-In the lattice system, which of the following functions can be used to finely control the appearance of all lattice plots?
+When using knitr and R Markdown and producing output in HTML, why should you never edit the resulting HTML file?
 
-- [x]trellis.par.set()
-- [ ]splom()
-- [ ]par()
-- [ ]print.trellis()
+- [x] Every time you knit() the R Markdown file, the HTML file will be overwritten
+- [ ] The Markdown file generated by knitr is the appropriate file to edit.
+- [ ] Editing the HTML file requires knowledge of a separate markup language.
+- [ ] The HTML file is not a text file.
 
-`?trellis.par.set`.
+**Answer**
 
-> **Description**
->
-> Functions used to query, display and modify graphical parameters for fine control of Trellis displays. Modifications are made to the settings for the currently active device only.
+Processing of knitr Documents (what happens under the hood):
 
-## Question 6
-
-What is ggplot2 an implementation of?
-
-- [ ] the base plotting system in R
-- [ ] the S language originally developed by Bell Labs
-- [ ] a 3D visualization system
-- [x] the Grammar of Graphics developed by Leland Wilkinson
-
-Found in slide 2 of [ggplot2][2_2_ggplot-2.pdf] document.
-
-> An implementation of the Grammar of Graphics by Leland Wilkinson
-
-## Question 7
-
-Load the `airquality' dataset form the datasets package in R
-
-```
-library(datasets)
-data(airquality)
-```
-
-I am interested in examining how the relationship between ozone and wind speed varies across each month. What would be the appropriate code to visualize that using ggplot2? 
-
-- [ ] `qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))`
-- [ ] `qplot(Wind, Ozone, data = airquality)`
-- [ ] `qplot(Wind, Ozone, data = airquality, geom = "smooth")`
-- [x] `airquality = transform(airquality, Month = factor(Month)); qplot(Wind, Ozone, data = airquality, facets = .~Month)`
-
-The `transform()` function explicitly ensures the Month variable will be a factor. Although, the `. ~factor(Month)` is more neatly for me.
-
-## Question 8
-
-What is a `geom` in the ggplot2 system?
-
-- [ ] a statistical transformation
-- [x] a plotting object like point, line, or other shape
-- [ ] a method for making conditioning plots
-- [ ] a method for mapping data to attributes like color and size
-
-According to the slide 24 of [Ggplot2][2_2_ggplot-2.pdf] Document.
-
-> * `geoms`: geometric objects like points, lines, shapes.
-
-## Question 9
-
-When I run the following code I get an error:
-
-```
-library(ggplot2)
-library(ggplot2movies)
-g <- ggplot(movies, aes(votes, rating))
-print(g)
-```
-
-I was expecting a scatterplot of 'votes' and 'rating' to appear. What's the problem?
-
-- [x] ggplot does not yet know what type of layer to add to the plot.
-- [ ] There is a syntax error in the call to ggplot.
-- [ ] The object 'g' does not have a print method.
-- [ ] The dataset is too large and hence cannot be plotted to the screen.
-
-It is necessary to install the `ggplot2movies` package. The problem relies on the lack of geom method to select the way graphic will display the data.
-
-## Question 10
-
-The following code creates a scatterplot of 'votes' and 'rating' from the movies dataset in the ggplot2 package. After loading the ggplot2 package with the library() function, I can run
-
-```
-qplot(votes, rating, data = movies)
-```
-
-How can I modify the the code above to add a smoother to the scatterplot?
-
-- [ ] qplot(votes, rating, data = movies) + stats_smooth("loess")
-- [ ] qplot(votes, rating, data = movies, smooth = "loess")
-- [x] qplot(votes, rating, data = movies) + geom_smooth()
-- [ ] qplot(votes, rating, data = movies, panel = panel.loess)
-
-There are two ways to do it:
-
-Option 1 - Example on slide 9 from [Gpplot2][2_2_ggplot-2.pdf] document
-
-```{r,cache=TRUE,message=FALSE,warning=FALSE}
-# Adding geom argument on qplot function:
-qplot(votes, rating, data = movies, geom = c("point","smooth"))
-```
-
-Option 2 - Example on slide 19 from [Gpplot2][2_2_ggplot-2.pdf] document
-```{r,cache=TRUE,message=FALSE,warning=FALSE}
-# Adding geom_smooth to qplot function:
-qplot(votes, rating, data = movies) + geom_smooth()
-```
-
-```{r,include=FALSE}
-markdown::renderMarkdown(file = basename(path = rstudioapi::getSourceEditorContext()$path))
-```
-
-
-
-
-```{r,include=FALSE}
-# Github Document
-if(!knitr::is_html_output()) {
-    "Eu posso trabalhar com o endereço relativo"
-    ref_1 <- "./slides/2_1_plotting-lattice.pdf"
-    ref_2 <- "./slides/2_2_ggplot-2.pdf"
-
-# HTML document
-} else {
-    "Eu preciso do URL completo"
-    ref_1 <- paste0(params$slug_relative,"tree/main/",params$slug_chapter,"slides/2_1_plotting-lattice.pdf")
-    ref_2 <- paste0(params$slug_relative,"tree/main/",params$slug_chapter,"slides/2_2_ggplot-2.pdf")
-}
-```
-
-<!-- Inner references -->
-
-[2_1_plotting-lattice.pdf]: `r ref_1`
-[2_2_ggplot-2.pdf]: `r ref_2`
+* You write the RMarkdown document (`.Rmd`)
+* knitr produces a Markdown document (`.md`)
+* knitr converts the Markdown document into HTML (by default)
+* `.Rmd` -> `.md` -> `.html`
+    * **This process will overwrite the `.md` and `.html` files.**
+* You should NOT edit (or save) the `.md` or `.html` documents until you are finished
