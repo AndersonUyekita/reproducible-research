@@ -50,7 +50,6 @@ library(lubridate)
 * Lesson 2: knitr [](){id="lesson-2"}
     * [knitr][l2_1]
 
-
 [l1_1]: ./slides/2_1_1_markdown.pdf
 [l1_2]: ./slides/2_1_2_r-markdown.pdf
 [l2_1]: ./slides/2_2_knitr.pdf
