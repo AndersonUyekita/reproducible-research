@@ -11,7 +11,7 @@ params:
   specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
   instructor: "Roger D Peng"
   course_start: !r lubridate::ymd("2022/06/20")
-  course_finish: !r lubridate::today()
+  course_finish: !r lubridate::ymd("2022/06/22")
   week: "Week 1"
   slug: 'Week%201'
 ---
@@ -52,9 +52,9 @@ library(lubridate)
     * [Organizing Your Analysis][l3_1]
 
 [l1_1]: ./slides/1_1_repro-research.pdf
-[l2_1]: ./slides/1_3_1_structure-of-a-data-analysis-1.pdf
-[l2_2]: ./slides/1_3_2_structure-of-a-data-analysis-2.pdf
-[l3_1]: ./slides/1_4_organizing-a-data-analysis.pdf
+[l2_1]: ./slides/1_2_1_structure-of-a-data-analysis-1.pdf
+[l2_2]: ./slides/1_2_2_structure-of-a-data-analysis-2.pdf
+[l3_1]: ./slides/1_3_organizing-a-data-analysis.pdf
 
 --------------------------------------------------------------------------------
 
@@ -68,17 +68,50 @@ library(lubridate)
 
 ### [<kbd>Lesson 1</kbd>](#lesson-1) Concepts and Ideas
 
+Replication: Based on an experiment, I will try to do it using my data following a third party's instructions (computer code).
+
+Reproduction: I will use the same dataset and computer code to get the same results.
+
 **Summary**
 
+* Reproducible research is important as a minimum standard, particularly for studies that are difficult to replicate  
+* Infrastructure is needed for creating and distributing reproducible documents, beyond  what is currently available  
+* There is a growing number of tools for creating reproducible documents  
 
 
 ### [<kbd>Lesson 2</kbd>](#lesson-2) Structure of a Data Analysis
 
-**Summary**
+Steps in a data analysis Steps in a data analysis
+
+* Define the question
+* Define the ideal data set
+* Determine what data you can access
+* Obtain the data
+* Clean the data
+* Exploratory data analysis
+* Statistical prediction/modeling
+* Interpret results
+* Challenge results
+* Synthesize/write up results
+* Create reproducible code
 
 
 ### [<kbd>Lesson 3</kbd>](#lesson-3) Organizing Your Analysis
 
-
+Data analysis files
 
 **Summary**
+
+* Data
+    * Raw data
+    * Processed data (it should be tidy)
+* Figures
+    * Exploratory figures
+    * Final figures
+* R code
+    * Raw / unused scripts
+    * Final scripts
+    * R Markdown files
+* Text
+    * README files
+    * Text of analysis / report
