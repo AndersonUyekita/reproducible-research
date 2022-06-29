@@ -11,7 +11,7 @@ params:
   specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
   instructor: "Roger D Peng"
   course_start: !r lubridate::ymd("2022/06/20")
-  course_finish: !r lubridate::today()
+  course_finish: !r lubridate::ymd("2022/06/29")
   certificate_url: "./"
   page: ""
   weeks: !r list(
@@ -58,11 +58,11 @@ library(lubridate)
 
 #### Class Notes
 
-* [&#x1F4C6; Week 1](./tree/main/Week%201)
-* [&#x1F4C6; Week 2](./tree/main/Week%202)
-* [&#x1F4C6; Week 3](./tree/main/Week%203)
-* [&#x1F4C6; Week 4](./tree/main/Week%204)
-* [&#x1F4D1; Course Textbook Notes](./tree/main/book)
+* [&#x1F4C6; Week 1](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
+* [&#x1F4C6; Week 2](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
+* [&#x1F4C6; Week 3](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201/tree/main/Week%203)
+* [&#x1F4C6; Week 4](./Week%204)
+* [&#x1F4D1; Course Textbook Notes](https://github.com/AndersonUyekita/reproducible-research/tree/main/book)
 
 --------------------------------------------------------------------------------
 

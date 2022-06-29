@@ -11,7 +11,7 @@ Reproducible Research
     target="_blank" rel="noopener">Reproducible Research</a>
     -   🧑‍🏫 Instructor: Roger D Peng
     -   🚦 Start: Monday, 20 June 2022
-    -   🏁 Finish: Wednesday, 22 June 2022
+    -   🏁 Finish: Wednesday, 29 June 2022
 -   🎓 [Certificate](./)
 
 ------------------------------------------------------------------------
@@ -29,11 +29,15 @@ Reproducible Research
 
 #### Class Notes
 
--   [📆 Week 1](./tree/main/Week%201)
--   [📆 Week 2](./tree/main/Week%202)
--   [📆 Week 3](./tree/main/Week%203)
--   [📆 Week 4](./tree/main/Week%204)
--   [📑 Course Textbook Notes](./tree/main/book)
+-   [📆 Week
+    1](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
+-   [📆 Week
+    2](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
+-   [📆 Week
+    3](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201/tree/main/Week%203)
+-   [📆 Week 4](./Week%204)
+-   [📑 Course Textbook
+    Notes](https://github.com/AndersonUyekita/reproducible-research/tree/main/book)
 
 ------------------------------------------------------------------------
 
