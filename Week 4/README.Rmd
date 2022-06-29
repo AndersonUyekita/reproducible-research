@@ -1,18 +1,18 @@
 ---
-title: '`Week 4` Exploratory Data Analysis'
+title: '`Week 4` Reproducible Research'
 author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
 output:
   github_document: default
 params:
   author: "Anderson H Uyekita"
-  course: "Exploratory Data Analysis"
-  course_url: "https://www.coursera.org/learn/exploratory-data-analysis"
+  course: "Reproducible Research"
+  course_url: "https://www.coursera.org/learn/reproducible-research"
   specialization: "Data Science: Foundations using R Specialization"
   specialization_url: "https://www.coursera.org/specializations/data-science-foundations-r"
   instructor: "Roger D Peng"
+  course_start: !r lubridate::ymd("2022/06/29")
+  course_finish: !r lubridate::ymd("2022/06/29")
   week: "Week 4"
-  course_start: !r lubridate::ymd("2022/06/15")
-  course_finish: !r lubridate::ymd("2022/06/15")
   slug: 'Week%204'
 ---
 
@@ -47,9 +47,13 @@ library(ggplot2)
 
 #### Slides
 
-* Lesson 1: Case Studies [](){id="lesson-1"}
+* Lesson 1: Caching Computations [](){id="lesson-1"}
+    * [Caching Computations][l1_1]
+* Lesson 2: Case Study: Air Pollution [](){id="lesson-2"}
     * [VideoClustering Case Study][l1_1]
-    * Air Pollution Case Study
+* Lesson 3: Case Study: High Throughput Biology [](){id="lesson-3"}
+    * [VideoClustering Case Study][l1_1]
+    
 
 [l1_1]: ./slides/4_1_clustering-example.pdf
 
@@ -57,7 +61,7 @@ library(ggplot2)
 
 #### Description
 
-> This week, we'll look at two case studies in exploratory data analysis. The first involves the use of cluster analysis techniques, and the second is a more involved analysis of some air pollution data. How one goes about doing EDA is often personal, but I'm providing these videos to give you a sense of how you might proceed with a specific type of dataset.
+> This week there are two case studies involving the importance of reproducibility in science for you to watch.
 
 --------------------------------------------------------------------------------
 
