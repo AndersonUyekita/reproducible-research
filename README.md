@@ -29,15 +29,11 @@ Reproducible Research
 
 #### Class Notes
 
--   [📆 Week
-    1](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
--   [📆 Week
-    2](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
--   [📆 Week
-    3](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201/tree/main/Week%203)
+-   [📆 Week 1](./Week%201)
+-   [📆 Week 2](./Week%202)
+-   [📆 Week 3](./Week%203)
 -   [📆 Week 4](./Week%204)
--   [📑 Course Textbook
-    Notes](https://github.com/AndersonUyekita/reproducible-research/tree/main/book)
+-   [📑 Course Textbook Notes](./book)
 
 ------------------------------------------------------------------------
 

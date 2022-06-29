@@ -58,11 +58,11 @@ library(lubridate)
 
 #### Class Notes
 
-* [&#x1F4C6; Week 1](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
-* [&#x1F4C6; Week 2](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201)
-* [&#x1F4C6; Week 3](https://github.com/AndersonUyekita/reproducible-research/tree/main/Week%201/tree/main/Week%203)
+* [&#x1F4C6; Week 1](./Week%201)
+* [&#x1F4C6; Week 2](./Week%202)
+* [&#x1F4C6; Week 3](./Week%203)
 * [&#x1F4C6; Week 4](./Week%204)
-* [&#x1F4D1; Course Textbook Notes](https://github.com/AndersonUyekita/reproducible-research/tree/main/book)
+* [&#x1F4D1; Course Textbook Notes](./book)
 
 --------------------------------------------------------------------------------
 
