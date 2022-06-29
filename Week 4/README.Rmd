@@ -38,24 +38,23 @@ library(ggplot2)
 
 #### Assignments & Deliverables
 
-* &#x1F4BB; Swirl
-    * CaseStudy
 * This week there is no &#x1F4DD; Quiz
-* [&#x1F680; Course Project 2 Repository](https://github.com/AndersonUyekita/exploratory-data-analysis_course-project-2)
+* [&#x1F680; Course Project 2 Repository](https://github.com/AndersonUyekita/reproducible-research_course-project-2)
 
 --------------------------------------------------------------------------------
 
 #### Slides
 
 * Lesson 1: Caching Computations [](){id="lesson-1"}
-    * [Caching Computations][l1_1]
+    * [Caching Computations][l1]
 * Lesson 2: Case Study: Air Pollution [](){id="lesson-2"}
-    * [VideoClustering Case Study][l1_1]
+    * [Identifying Harmful Constituents in Particulate Matter Air Pollution][l2]
 * Lesson 3: Case Study: High Throughput Biology [](){id="lesson-3"}
-    * [VideoClustering Case Study][l1_1]
+    * [Case Study: High Throughput Biology][l3]
     
-
-[l1_1]: ./slides/4_1_clustering-example.pdf
+[l1]: ./slides/4_1_caching.pdf
+[l2]: ./slides/4_2_case-study-ap.pdf
+[l3]: ./slides/4_3_case-study-baggerly.pdf
 
 --------------------------------------------------------------------------------
 
@@ -67,6 +66,36 @@ library(ggplot2)
 
 ## Class Notes
 
-### [<kbd>Lesson 1</kbd>](#lesson-1) Case Studies
+### [<kbd>Lesson 1</kbd>](#lesson-1) Caching Computations
 
-Both videos present some practical cases. Unfortunately, I didn't find anything worthwhile to take note of.
+The `cacher` package is no longer available on CRAN.
+
+* https://cran.r-project.org/web/packages/cacher/index.html
+
+```
+Package ‘cacher’ was removed from the CRAN repository.
+
+Formerly available versions can be obtained from the archive.
+
+Archived on 2014-09-19 as vignette locations were never updated for R 3.1.0.
+
+Please use the canonical form https://CRAN.R-project.org/package=cacher to link to this page.
+```
+
+**Readings**
+
+* https://www.r-bloggers.com/2020/04/caching-in-r/
+
+### [<kbd>Lesson 1</kbd>](#lesson-2) Case Study: Air Pollution
+
+**Lessons Learned**
+
+* Reproducibility of NMMAPS allowed for a secondary analysis (and linking with PM chemical constituent data) investigating a novel hypothesis (Lippmann et al.)
+* Reproducibility also allowed for a critique of that new analysis and some additional new analysis (Dominici et al.)
+* Original hypothesis not necessarily invalidated, but evidence not as strong as originally suggested (more work should be done)
+* Reproducibility allows for the scientific discussion to occur in a timely and informed manner
+* This is how science works
+
+### [<kbd>Lesson 1</kbd>](#lesson-3) Case Study: High Throughput Biology
+
+Lecture about how to create reproducible research.
