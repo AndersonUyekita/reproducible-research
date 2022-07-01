@@ -12,7 +12,7 @@
     -   🧑‍🏫 Instructor: Roger D Peng
 -   📆 Reading
     -   🚦 Start: Monday, 20 June 2022
-    -   🏁 Finish: Wednesday, 22 June 2022
+    -   🏁 Finish: Not finished
 -   📔 Book: <a href="https://leanpub.com/reportwriting" target="_blank"
     rel="noopener">Report Writing for Data Science in R</a>
 
