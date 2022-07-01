@@ -12,7 +12,8 @@ Reproducible Research
     -   🧑‍🏫 Instructor: Roger D Peng
     -   🚦 Start: Monday, 20 June 2022
     -   🏁 Finish: Wednesday, 29 June 2022
--   🎓 [Certificate](./)
+-   🎓
+    [Certificate](https://www.coursera.org/account/accomplishments/certificate/9HUNAAN6YYWV)
 
 ------------------------------------------------------------------------
 

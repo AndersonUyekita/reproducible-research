@@ -12,7 +12,7 @@ params:
   instructor: "Roger D Peng"
   course_start: !r lubridate::ymd("2022/06/20")
   course_finish: !r lubridate::ymd("2022/06/29")
-  certificate_url: "./"
+  certificate_url: "https://www.coursera.org/account/accomplishments/certificate/9HUNAAN6YYWV"
   page: ""
   weeks: !r list(
     week_1 = 1,
